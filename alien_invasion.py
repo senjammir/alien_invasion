@@ -44,6 +44,10 @@ def _check_events(self):
     for event in pygame.event.get():
         if event.type == pygame.QUIT:    # Quits the game if user selects quit
             sys.exit()
+        elif event.type == pygame.KEYDOWN:
+            if event.type == pygame.K_RIGHT:
+                # Move the shiip to the right
+                self.ship.rect.x += 1
 
 
 def _update_screen(self):
